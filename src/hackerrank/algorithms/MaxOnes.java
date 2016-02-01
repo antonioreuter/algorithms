@@ -11,34 +11,36 @@ public class MaxOnes {
     int indexEndGlobal = 0;
 
     for (int i = 0; i < entries.length; i++) {
-      int maxZeros = 0;
-      int maxAux = 0;
-      int indexStart = -1;
-      int indexEnd = -1;
+      if (entries[i] == 0) {
+        int maxZeros = 0;
+        int maxAux = 0;
+        int indexStart = -1;
+        int indexEnd = -1;
 
-      for (int j = i; j < entries.length; j++) {
-        if (entries[j] == 0) {
-          if (indexStart == -1) {
-            indexStart = j;
-            indexEnd = j;
-            maxZeros += 1;
-            maxAux += 1;
-          } else {
-            maxAux += 1;
-            if (maxAux > maxZeros) {
+        for (int j = i; j < entries.length; j++) {
+          if (entries[j] == 0) {
+            if (indexStart == -1) {
+              indexStart = j;
               indexEnd = j;
-              maxZeros = maxAux;
+              maxZeros += 1;
+              maxAux += 1;
+            } else {
+              maxAux += 1;
+              if (maxAux > maxZeros) {
+                indexEnd = j;
+                maxZeros = maxAux;
+              }
             }
+          } else {
+            maxAux -= 1;
           }
-        } else {
-          maxAux -= 1;
         }
-      }
 
-      if (maxZeros > maxZerosGlobal) {
-        indexStartGlobal = indexStart;
-        indexEndGlobal = indexEnd;
-        maxZerosGlobal = maxZeros;
+        if (maxZeros > maxZerosGlobal) {
+          indexStartGlobal = indexStart;
+          indexEndGlobal = indexEnd;
+          maxZerosGlobal = maxZeros;
+        }
       }
     }
     return new int[]{indexStartGlobal, indexEndGlobal};
