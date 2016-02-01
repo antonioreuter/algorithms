@@ -1,11 +1,3 @@
-package hackerrank.algorithms;
-
-/**
- * Created by aandra1 on 01/02/16.
- */
-
-import java.util.Scanner;
-
 /*
 Suppose you have a string S that has the length N. It is indexed from 0 to N−1. String R is the reverse of string S.
 The string S is funny if the condition |Si−Si−1|=|Ri−Ri−1| is true for every i from 1 to N−1.
@@ -47,6 +39,14 @@ Here:
 |c-b| != |x-z|
 Hence, the string is Not Funny.
 */
+
+package hackerrank.algorithms;
+
+/**
+ * Created by aandra1 on 01/02/16.
+ */
+
+import java.util.Scanner;
 
 public class FunnyString {
 

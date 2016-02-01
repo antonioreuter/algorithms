@@ -1,9 +1,3 @@
-package hackerrank.algorithms;
-
-/**
- * Created by aandra1 on 01/02/16.
- */
-
 /*
 Roy wanted to increase his typing speed for programming contests. So, his friend advised him to type the sentence
 "The quick brown fox jumps over the lazy dog" repeatedly, because it is a pangram. (Pangrams are sentences constructed by using
@@ -36,6 +30,13 @@ Output #2 => not pangram
 Explanation
 In the first test case, the answer is pangram because the sentence contains all the letters of the English alphabet.
 */
+
+package hackerrank.algorithms;
+
+/**
+ * Created by aandra1 on 01/02/16.
+ */
+
 
 import java.util.ArrayList;
 import java.util.Arrays;

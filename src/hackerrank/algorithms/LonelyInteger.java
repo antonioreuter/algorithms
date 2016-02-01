@@ -1,9 +1,3 @@
-package hackerrank.algorithms;
-
-/**
- * Created by aandra1 on 01/02/16.
- */
-
 /*
 There are N integers in an array A. All but one integer occur in pairs. Your task is to find the number that occurs only once.
 
@@ -37,6 +31,12 @@ Explanation
 In the first input, we see only one element (1) and that element is the answer.
 In the second input, we see three elements; 1 occurs at two places and 2 only once. Thus, the answer is 2.
 In the third input, we see five elements. 1 and 0 occur twice. The element that occurs only once is 2.
+ */
+
+package hackerrank.algorithms;
+
+/**
+ * Created by aandra1 on 01/02/16.
  */
 
 import java.util.Scanner;
