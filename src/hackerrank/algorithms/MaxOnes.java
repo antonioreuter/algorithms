@@ -10,12 +10,17 @@ public class MaxOnes {
     int indexStartGlobal = 0;
     int indexEndGlobal = 0;
 
+    int maxZeros = 0;
+    int maxAux = 0;
+    int indexStart = -1;
+    int indexEnd = -1;
+
     for (int i = 0; i < entries.length; i++) {
       if (entries[i] == 0) {
-        int maxZeros = 0;
-        int maxAux = 0;
-        int indexStart = -1;
-        int indexEnd = -1;
+        maxZeros = 0;
+        maxAux = 0;
+        indexStart = -1;
+        indexEnd = -1;
 
         for (int j = i; j < entries.length; j++) {
           if (entries[j] == 0) {
@@ -65,9 +70,18 @@ public class MaxOnes {
   }
 
   public static void main(String args[]) throws Exception {
-    int[] entries = new int[]{0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0};
+//    int[] entries = new int[]{0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0};
+    long startAt = System.currentTimeMillis();
+    int[] entries = new int[100000];
+    for (int i = 0; i < 100000; i++) {
+      entries[i] = (int) Math.round(Math.random());
+    }
+
     int[] indexes = calculateIndex(entries);
     int total = countOnes(entries, indexes);
+    long endAt = System.currentTimeMillis();
     System.out.println(total);
+    System.out.println("Time: " + (endAt - startAt) / 1000);
+
   }
 }
