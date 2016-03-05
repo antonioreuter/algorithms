@@ -57,14 +57,14 @@ public class GridSearch {
 
       int I = 0;
       int i = 0;
-      boolean foundPattern = false;
+      boolean patternFounded = false;
       while (I < R && (R - I) >= r) {
         int J = 0;
         int j = 0;
         while (J < C && (C - J) >= c) {
           if (matrix[I][J].equals(pattern[0][0])) {
-            foundPattern = searchPattern(matrix, pattern, I, J);
-            if (foundPattern)
+            patternFounded = searchPattern(matrix, pattern, I, J);
+            if (patternFounded)
               break;
           }
 
@@ -72,14 +72,14 @@ public class GridSearch {
           j++;
         }
 
-        if (foundPattern)
+        if (patternFounded)
           break;
 
         I++;
         i++;
       }
 
-      if (foundPattern)
+      if (patternFounded)
         System.out.println("YES");
       else
         System.out.println("NO");
