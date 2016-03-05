@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * Created by aandra1 on 04/03/16.
+ * <p>
+ * Solution for algorithm: https://www.hackerrank.com/challenges/the-grid-search
  */
 public class GridSearch {
 
