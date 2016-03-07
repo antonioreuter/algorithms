@@ -58,11 +58,9 @@ public class GridSearch {
       String pattern[][] = initMatrix(in, r, c);
 
       int I = 0;
-      int i = 0;
       boolean patternFounded = false;
       while (I < R && (R - I) >= r) {
         int J = 0;
-        int j = 0;
         while (J < C && (C - J) >= c) {
           if (matrix[I][J].equals(pattern[0][0])) {
             patternFounded = searchPattern(matrix, pattern, I, J);
@@ -71,14 +69,12 @@ public class GridSearch {
           }
 
           J++;
-          j++;
         }
 
         if (patternFounded)
           break;
 
         I++;
-        i++;
       }
 
       if (patternFounded)
